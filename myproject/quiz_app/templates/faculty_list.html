@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Faculty List
+{% endblock %}
+
+{% block content %}
+<h1>Faculty List</h1>
+<ul>
+    {% for f in faculties %}
+    <li>
+        <b>{{ f.name }}</b> -
+        <a href="{% url 'faculty_details' f.pk %}">Details</a> |
+        <a href="{% url 'update_faculty' f.pk %}">Update</a> |
+        <a href="{% url 'delete_faculty' f.pk %}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="/home/">Go Back to Home Page</a>
+{% endblock %}
+
+

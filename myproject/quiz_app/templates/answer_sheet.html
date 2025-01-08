@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Answer Sheet
+{% endblock %}
+
+{% block content %}
+<h2>Scripts</h2>
+<p>Name: <strong>{{ name }}</strong></p>
+<p>Student ID: <strong>{{ student_id }}</strong></p>
+<p>Course Title: <strong>{{ course_title }}</strong></p>
+<p>Course Code: <strong>{{ course_code }}</strong></p>
+<p>Section: <strong>{{ section }}</strong></p>
+<p>Instructor: <strong>{{ instructor }}</strong></p>
+<br>
+<p>Answer:</p>
+{{ answer }}
+{% endblock %}

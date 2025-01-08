@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Login User
+{% endblock %}
+
+{% block content %}
+You are logged in as <b>{{ request.user }}</b>
+<br>
+<a href="/create_student/">Add Student</a> <br>
+<a href="/students/">Student List</a> <br>
+<a href="/create_course/">Create Course</a> <br>
+<a href="/course_list/">Course List</a> <br>
+<a  href="/create_question/">Create Question</a> <br>
+<a href="/question_list_for_faculty/">View Questions</a> <br>
+<form method="POST" action="{% url 'logout_faculty' %}">
+    {% csrf_token %}
+    <button type="submit">Log Out</button>
+</form>
+{% endblock %}

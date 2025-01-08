@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Student List
+{% endblock %}
+
+{% block content %}
+<h1>Student List</h1>
+<ul>
+    {% for s in students %}
+    <li>
+        <b>{{ s.name }}</b> -
+        <a href="{% url 'student_details' s.pk %}">Details</a> |
+        <a href="{% url 'update_student' s.pk %}">Update</a> |
+        <a href="{% url 'delete_student' s.pk %}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="/home/">Go Back to Home Page</a>
+{% endblock %}
+
+

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Faculty Details
+{% endblock %}
+
+{% block content %}
+<h1>Details</h1>
+<p>Name:<strong>{{ faculty.name }}</strong></p>
+<p>Designation:<strong>{{ faculty.designation }}</strong></p>
+<a href="/faculties/">Back</a>
+{% endblock %}

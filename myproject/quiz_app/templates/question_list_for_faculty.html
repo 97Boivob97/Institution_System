@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Question List
+{% endblock %}
+
+{% block content %}
+<h>Questions:</h>
+<ul>
+    {% for q in questions %}
+    <li>
+        Course Title: <strong>{{ q.course_title }}</strong> <br>
+        Course Code: <strong>{{ q.course_code }}</strong> <br>
+        Questions:
+        <ul>
+            {% for question in q.question.splitlines %}
+            <li>{{ question }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    <a href="{% url 'update_question' q.pk %}">Update Question</a>
+    {% endfor %}
+</ul>
+
+{% endblock %}

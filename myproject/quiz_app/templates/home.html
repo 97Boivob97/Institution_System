@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+
+{% block content %}
+<p>Welcome <b>{{ request.user }}</b></p>
+<a href="/create_faculty/">Create Faculty</a> <br>
+<a href="/faculties/">Faculty List</a> <br>
+<a href="/students/">Student List</a> <br>
+{% endblock %}
